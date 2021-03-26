@@ -3,6 +3,14 @@ import "./App.css";
 import "nes.css/css/nes.min.css";
 
 export const App = () => {
+  const monthDiff = (startDate) => {
+    if (startDate > Date()) [startDate, Date] = [Date(), startDate];
+    let diffMonths = (new Date().getFullYear() - startDate.getFullYear()) * 12;
+    diffMonths -= startDate.getMonth();
+    diffMonths += new Date().getMonth();
+    return diffMonths;
+  };
+
   return (
     <div className="main">
       <header>
@@ -51,65 +59,78 @@ export const App = () => {
       <section id="about-me">
         <div className="container">
           <h2>About me</h2>
+          <p>Nice to meet you !</p>
           <p>
-            I am a full stack web and android developer with experience in
-            back-end web and mobile development for more than three years. I've
-            got considerable working experience with Kotlin and numerous
-            JavaScript frameworks, especially ReactJS and Vue.JS. Currently I'm
-            a student at Business and Technology University in Tbilisi and
-            junior Android developer at Wandio
+            I'm Nika, a 19 y/o student in BTU and currently working at&nbsp;
+            <a
+              href="https://wandio.com/"
+              target="_blank"
+              rel="noreferrer"
+              class="text-link"
+            >
+              WANDIO
+            </a>
+            , my specialization (and passion) is Android development with Kotlin
+          </p>
+          <p>
+            Also i am a full stack web developer more than three years. I've got
+            considerable working experience with numerous JavaScript frameworks,
+            especially ReactJS and Vue.JS.
+          </p>
+          <p>
+            For the past&nbsp;{monthDiff(new Date(1601294400000))} month I've
+            been building Android applications, client-side webs, developing
+            application databases, for businesses.I've done this as an employee,
+            and a freelancer.
           </p>
         </div>
       </section>
       <section id="portfolio">
         <div className="container">
-          <h2>Portfolio</h2>
+          <h2>Work Experience</h2>
 
-          <ul class="nes-list is-disc">
+          <ul className="nes-list is-disc">
             <li>
-              <a
-                href="https://formulanews.ge/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                formulanews.ge
-              </a>
-              &nbsp; Built one of the most popular news website in georgia, has
-              more than 500K visitors per Month
+              Wandio - Junior Android developer, October 2020 - present
               <ul className="nes-list is-circle">
-                <li>Worked on a high load project</li>
-                <li>Maintained legacy PHP project</li>
-                <li>Developed Content Management System for journalists</li>
+                <li>Application Development for Android.</li>
+                <li>Maintaining existing application.</li>
               </ul>
             </li>
-
             <li>
-              <a
-                href="https://nation.ge/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                nation.ge
-              </a>
-              &nbsp; Built news media website
+              Proservice.ge - Full-stack web developer, September 2019 -
+              Octomber 2020
               <ul className="nes-list is-circle">
-                <li>Worked on a high load project</li>
-                <li>Maintained legacy PHP project</li>
-                <li>Developed Content Management System for journalists</li>
-              </ul>
-            </li>
-
-            <li>
-              <a
-                href="https://kiu.edu.ge/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                kiu.edu.ge
-              </a>
-              &nbsp; Built website and CMS for Kutaisi international university
-              <ul className="nes-list is-circle">
-                <li>Wrote front-end using Bootstrap and jQuery Libraries.</li>
+                <li>Worked on a high load projects.</li>
+                <li>maintained legacy PHP projects.</li>
+                <li>
+                  Wrote front-end of some responsive web sites using: Bootstrap
+                  and jQuery Libraries.
+                </li>
+                <li>
+                  Wrote Front-End of TV Formula's project{" "}
+                  <a
+                    href="https://formula.ge/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    formula.ge
+                  </a>{" "}
+                  , using: HTML5, CSS3, video.js
+                </li>
+                <li>
+                  Implement Live Stream for TV Formula,{" "}
+                  <a
+                    href="https://formulanews.ge/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    formulanews.ge
+                  </a>
+                </li>
+                <li>
+                  Designed and implemented HTTP API for Android and IOS clients.
+                </li>
               </ul>
             </li>
           </ul>
