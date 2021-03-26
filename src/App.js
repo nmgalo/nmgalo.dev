@@ -61,7 +61,7 @@ export const App = () => {
           <h2>About me</h2>
           <p>Nice to meet you !</p>
           <p>
-            I'm Nika, a 19 y/o student in BTU and currently working at&nbsp;
+            I'm Nika, a 19 y/o student in BTU and currently worked at&nbsp;
             <a
               href="https://wandio.com/"
               target="_blank"
