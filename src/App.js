@@ -99,7 +99,7 @@ export const App = () => {
             </li>
             <li>
               Proservice.ge - Full-stack web developer, September 2019 -
-              Octomber 2020
+              October 2020
               <ul className="nes-list is-circle">
                 <li>Worked on a high load projects.</li>
                 <li>maintained legacy PHP projects.</li>
